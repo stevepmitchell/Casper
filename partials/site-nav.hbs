@@ -17,9 +17,6 @@
         </div>
     </div>
     <div class="site-nav-right">
-        {{#if @site.secondary_navigation}}
-            {{navigation type="secondary"}}
-        {{else}}
             <div class="social-links">
                 {{#if @site.facebook}}
                     <a class="social-link social-link-fb" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
@@ -31,7 +28,6 @@
             {{#unless @labs.members}}
                 <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
             {{/unless}}
-        {{/if}}
 
         {{#if @labs.members}}
             <a class="subscribe-button" href="#subscribe">Subscribe</a>
